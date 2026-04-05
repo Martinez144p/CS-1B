@@ -1,34 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quiz Upload</title>
+  <title>Quiz Upload</title>
+  <style>
+    .container {
+      width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px #8a2be2;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px); /* subtle glass effect */
+    }
+    .container:hover {
+      transform: scale(1.15); /* zoom in */
+      box-shadow: 0 0 40px #8a2be2, 0 0 80px #6a0dad; /* glowing effect */
+    }
 
-    <script>
-        function submitQuiz() {
-            alert("Quiz uploaded successfully!");
-        }
-    </script>
+    .navbar {
+      background-color: #8a2be2;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px #8a2be2;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      color: #ddd;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      color: white;
+    }
+    .nav-link {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: black;
+    }
+    .nav-link:hover {
+      transform: scale(1.5);
+      color: blue;
+    }
 
+    /* Inputs and button styling */
+    input, button {
+      padding: 10px;
+      margin: 8px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+    }
+    input {
+      width: 80%;
+      background-color: rgba(255,255,255,0.2);
+      color: white;
+    }
+    button {
+      background-color: #8a2be2;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background-color: #6a0dad;
+      transform: scale(1.1);
+    }
+  </style>
+
+  <script>
+    function submitQuiz() {
+      var title = document.getElementById("quizTitle").value;
+      var file = document.getElementById("quizFile").value;
+      var image = document.getElementById("quizImage").value;
+
+      if (title === "" || file === "" || image === "") {
+        alert("Please fill out all fields before submitting.");
+      } else {
+        alert("Quiz uploaded successfully!");
+      }
+    }
+  </script>
 </head>
-
 <body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="dashboard.html" class="nav-link">Dashboard</a>
+    <a href="quiz_upload.html" class="nav-link">Quiz</a>
+    <a href="lab_upload.html" class="nav-link">Lab</a>
+    <a href="exam_upload.html" class="nav-link">Exam</a>
+  </nav>
 
-<h1>Quiz Upload</h1>
+  <div class="container">
+    <h1>Quiz Upload</h1>
+    <form>
+      Title: <br>
+      <input type="text" id="quizTitle"><br><br>
 
-<form>
+      Upload File: <br>
+      <input type="file" id="quizFile"><br><br>
 
-Title: <br>
-<input type="text"><br><br>
+      Upload Image: <br>
+      <input type="file" id="quizImage"><br><br>
 
-Upload File: <br>
-<input type="file"><br><br>
-
-Upload Image: <br>
-<input type="file"><br><br>
-
-<button type="button" onclick="submitQuiz()">Submit</button>
-
-</form>
-
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+  </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
+    <title>Martinez Portfolio</title>
 
    <style>
     
@@ -28,6 +28,11 @@
 .navbar a:hover {
     color: #ddd;
 }
+.navbar a:hover {
+    color: #fff;
+    text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
 
     body {
         margin: 0;
@@ -59,6 +64,13 @@
 
         box-shadow: 0 0 25px #8a2be2; 
     }
+    .box {
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
 
     .box img {
         border-radius: 15px;
@@ -68,17 +80,34 @@
     .box p {
         text-align: left; 
     }
+
+    .nav-link {
+  display: inline-block; 
+  
+  transition: transform 0.3s ease; 
+  
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  transform: scale(1.5); 
+  
+
+  color: blue; 
+}
+
 </style>
 
 </head>
 <body>
 
    <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="quiz_upload.html">Quiz</a>
-    <a href="lab_upload.html">Lab</a>
-    <a href="exam_upload.html">Exam</a>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="dashboard.html" class="nav-link">Dashboard</a>
+    <a href="quiz_upload.html" class="nav-link">Quiz</a>
+    <a href="lab_upload.html" class="nav-link">Lab</a>
+    <a href="exam_upload.html" class="nav-link">Exam</a>
 </nav>
 
 
@@ -91,10 +120,4 @@
             <p><b>Course: </b>Bachelor of Science in Computer Science</p>
             <p><b>Student Number: </b>251101165</p>
             <p><b>Section: </b>BSCS - 1B</p>
-            <p><b>About me: </b>I like watching anime and movies. my favorite anime is Onepiece, and my favorite movie is Weathering with you. I'm also a chess player and i love reading books about chess because it helps me improve and it's like a grimoire for me.</p>
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <p><b>About me:</b> I enjoy watching anime and movies. My favorite anime is One Piece, and I like watching Weathering With You. I'm also a chess player and I enjoy reading books about chess because it helps me improve.</p>

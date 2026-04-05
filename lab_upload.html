@@ -3,32 +3,191 @@
 <head>
     <title>Lab Upload</title>
 
+     <style>
+        .container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    text-align: center;
+     box-shadow: 0 0 20px #8a2be2;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+.container:hover {
+  transform: scale(1.15); /* zoom in */
+  box-shadow: 0 0 40px #8a2be2, 0 0 80px #6a0dad; /* glowing effect */
+}
+
+
+        .navbar {
+    background-color: #8a2be2;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f; /* dark background */
+    color: white;
+}
+
+ .nav-link {
+  display: inline-block; 
+  
+  transition: transform 0.3s ease; 
+  
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  transform: scale(1.5); 
+  
+
+  color: blue; 
+}
+
+input, button {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+input {
+  width: 80%;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+button {
+  background-color: #8a2be2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #6a0dad;
+  transform: scale(1.1);
+}
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lab-box {
+    display: block;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 15px #8a2be2;
+    transition: 0.3s;
+}
+
+.lab-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #8a2be2;
+}
+
+
+
+
+    </style>
+
     <script>
-        function submitLab() {
-            alert("Lab work uploaded!");
-        }
-    </script>
+  function submitLab() {
+    var title = document.getElementById("quizTitle").value;
+    var file = document.getElementById("quizFile").value;
+    var image = document.getElementById("quizImage").value;
+
+    if (title === "" || file === "" || image === "") {
+      alert("Please fill out all fields before submitting.");
+    } else {
+      alert("Quiz uploaded successfully!");
+    }
+  }
+</script>
 
 </head>
 
 <body>
 
-<h1>Lab Work Upload</h1>
+<nav class="navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="dashboard.html" class="nav-link">Dashboard</a>
+    <a href="quiz_upload.html" class="nav-link">Quiz</a>
+    <a href="lab_upload.html" class="nav-link">Lab</a>
+    <a href="exam_upload.html" class="nav-link">Exam</a>
+</nav>
 
-<form>
+<div class="main">
 
-Description: <br>
-<input type="text"><br><br>
+    <!-- LEFT SIDE (UPLOAD FORM) -->
+    <div class="container">
+        <h1>Lab Work Upload</h1>
 
-Upload File: <br>
-<input type="file"><br><br>
+        <form>
+            Title: <br>
+            <input type="text" id="quizTitle"><br><br>
 
-Upload Image: <br>
-<input type="file"><br><br>
+            Upload File: <br>
+            <input type="file" id="quizFile"><br><br>
 
-<button type="button" onclick="submitLab()">Submit</button>
+            Upload Image: <br>
+            <input type="file" id="quizImage"><br><br>
 
-</form>
+            <button type="button" onclick="submitLab()">Submit</button>
+        </form>
+    </div>
+
+    <!-- RIGHT SIDE (LAB ACTIVITIES) -->
+    <div class="side">
+
+        <a href="activities/LABACTIVITY1/index.html" class="lab-box">
+            Lab Activity 1
+        </a>
+
+        <a href="activities/LABACTIVITY2/MARTINEZ_LAB2.html" class="lab-box">
+            Lab Activity 2
+        </a>
+
+        <a href="#" class="lab-box">
+            Lab Activity 3
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 </html>

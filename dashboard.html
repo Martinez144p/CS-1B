@@ -4,20 +4,87 @@
     <title>Dashboard</title>
 
     <style>
+        .container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px #8a2be2;
+  transition: transform 0.3s ease; /* smooth zoom */
+}
+
+.container:hover {
+  transform: scale(1.2); /* zoom in */
+}
+.navbar {
+    background-color: #8a2be2;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f; /* dark background */
+    color: white;
+}
+
         body {
             font-family: Arial;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 0px;
         }
+         .nav-link {
+  display: inline-block; 
+  
+  transition: transform 0.3s ease; 
+  
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  transform: scale(1.5); 
+  
+
+  color: blue; 
+}
+
     </style>
 </head>
 
 <body>
+    
 
-<h1>Dashboard</h1>
-<p>Welcome to my portfolio dashboard.</p>
+    <nav class="navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="dashboard.html" class="nav-link">Dashboard</a>
+    <a href="quiz_upload.html" class="nav-link">Quiz</a>
+    <a href="lab_upload.html" class="nav-link">Lab</a>
+    <a href="exam_upload.html" class="nav-link">Exam</a>
+</nav>
 
-<p>Use the navigation bar to view my uploads.</p>
+
+
+<div class="container">
+    <h1>Dashboard</h1>
+    <p>Welcome to my dashboard.</p>
+</div>
+
 
 </body>
 </html>
