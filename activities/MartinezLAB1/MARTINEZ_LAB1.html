@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARTINEZ LAB1</title>
+
+
+
+    <style>
+
+
+
+        /* just the basics — no extra decorations */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body {
+  background-image: url("zenitsu.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* makes it look nicer */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 70px;
+  color: white;
+}
+
+.navbar {
+  background-color: #8a2be2;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px #8a2be2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+.nav-link {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: black;
+    }
+    .nav-link:hover {
+      transform: scale(1.5);
+      color: blue;
+    }
+
+
+        .card {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(0,0,0,0.6); /* glass effect */
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 25px #8a2be2;
+}
+
+        h2 {
+    color: white;
+}
+
+        /* ---------- SIMPLE CAROUSEL ---------- */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.2rem;
+            scroll-snap-type: x mandatory;
+            padding: 0.5rem 0.2rem 1.5rem 0.2rem;
+            /* hide scrollbar if you want cleaner look (optional) */
+            scrollbar-width: thin;
+            scrollbar-color: #a58bd4 #e5d9ff;
+        }
+
+        /* for Chrome/Safari */
+        .carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carousel::-webkit-scrollbar-track {
+            background: #e5d9ff;
+            border-radius: 20px;
+        }
+        .carousel::-webkit-scrollbar-thumb {
+            background: #a58bd4;
+            border-radius: 20px;
+        }
+
+        .carousel-item {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 220px;
+            height: 150px;
+            background: #7a62b5;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 15px 25px #9d87cf;
+            border: 3px solid white;
+        }
+
+        /* make images fit (if you use real images) */
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.4rem;
+        }
+
+        .note {
+            margin-top: 1.8rem;
+            color: #4a3977;
+            background: #eee5ff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 3rem;
+            font-size: 1rem;
+        }
+        .slide-btn {
+    padding: 10px;
+    background-color: #8a2be2;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* IMPORTANT */
+}
+
+.slide-btn:hover {
+    transform: scale(1.3); /* what you want */
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+        
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+  <a href="../../index.html">Home</a>
+  <a href="../../dashboard.html">Dashboard</a>
+  <a href="../../quiz_upload.html">Quiz</a>
+  <a href="../../lab_upload.html">Lab</a>
+  <a href="../../exam_upload.html">Exam</a>
+</nav>
+<div class="wrapper">
+    <div class="card">
+        <h2><b>SERVANT HEROES</b></h2>
+
+        <!-- === CAROUSEL (only HTML + CSS) === -->
+        <div class="carousel">
+            
+            <!-- slide 1 (using colored divs with emoji – you can replace with <img> ) -->
+            <div class="carousel-item" id="slide1">
+                <img src = "saber.webp">
+                <a href="#slide1"></a>
+
+
+
+            </div>
+
+
+            <div class="carousel-item" id="slide2">
+                <img src = "gilgamesh.avif"> 
+                <a href="#slide2"> </a>
+
+
+
+            </div>
+
+
+            <div class="carousel-item" id="slide3">
+                 <img src = "assasin.jpg">
+                 <a href="#slide3" ></a>
+
+
+
+            </div>
+
+
+            <div class="carousel-item" id="slide4">
+                <img src = "honkaiM1.png">
+                <a href =  "#slide4" ></a>
+               
+
+
+
+            </div>
+
+
+            <div class="carousel-item" id="slide5">
+                <img src = "honkaiM2.webp">
+                <a href="#slide5"></a>
+
+
+
+            </div>
+
+
+            <div class="carousel-item" id="slide6">
+                <img src = "honkaiM3.png">
+                
+
+
+
+            </div>
+
+            
+            
+
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <a href="#slide1" class="slide-btn" >Slide 1</a>
+
+        <a href="#slide2" class="slide-btn">Slide 2</a>
+
+
+        <a href="#slide3" class="slide-btn">Slide 3</a>
+
+
+        <a href="#slide4" class="slide-btn">Slide 4</a>
+
+
+        <a href="#slide5" class="slide-btn">Slide 5</a>
+
+
+        <a href="#slide6" class="slide-btn">Slide 6</a>
+
+
+        
+
+       
+    </div>
+    </div>
+</body>
+</html>
